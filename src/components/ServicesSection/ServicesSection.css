@@ -1,0 +1,62 @@
+.services-section {
+	display: flexbox;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Container for the services section */
+.services-section {
+	padding: 40px 20px;
+	background-color: var(--primary-purple);
+}
+
+/* Title styling */
+.services-section-title {
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 2rem;
+	color: #333;
+}
+
+/* Grid container for the cards */
+.services-cards-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+}
+
+/* Styling for individual service cards */
+.service-card {
+	background: #fff;
+	border: 1px solid #ddd;
+	padding: 20px;
+	border-radius: 8px;
+	text-align: left;
+	transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect for cards */
+.service-card:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling within the card */
+.service-card-image {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+	border-radius: 4px;
+}
+
+/* Title styling for each card */
+.service-card-title {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+/* Description styling for each card */
+.service-card-description {
+	font-size: 1rem;
+	color: #666;
+}

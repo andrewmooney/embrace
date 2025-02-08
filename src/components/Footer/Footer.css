@@ -1,0 +1,41 @@
+.footer {
+	background-color: var(--primary-purple);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+
+/* Style for the address and info sections */
+.footer-address,
+.footer-info {
+	margin: 10px 0;
+}
+
+/* Style for the "Return to top" link */
+.footer a {
+	color: #fff;
+	text-decoration: underline;
+	transition: color 0.3s ease;
+}
+
+.footer a:hover {
+	color: #e0e0e0;
+}
+
+/* Responsive layout for wider screens */
+@media (min-width: 768px) {
+	.footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: left;
+	}
+	.footer-address,
+	.footer-info {
+		flex: 1;
+	}
+	.footer-address {
+		margin-right: 20px;
+	}
+}

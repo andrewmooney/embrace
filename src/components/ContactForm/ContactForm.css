@@ -1,0 +1,70 @@
+/* Container for the contact form */
+.contact-form {
+	/* max-width: 600px; */
+	margin: 20px auto;
+	padding: 20px;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+/* Layout for rows in the form */
+.form-row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+}
+
+/* Individual form field styling */
+.form-field {
+	flex: 1;
+	min-width: 250px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+/* When a field should span the full row */
+.form-field.full-width {
+	flex: 1 1 100%;
+	margin-right: 0;
+}
+
+/* Label styling */
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+/* Input and textarea styling */
+input,
+textarea {
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+/* Submit button styling */
+.submit-button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.submit-button:hover {
+	background-color: #0056b3;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+	.form-row {
+		flex-direction: column;
+	}
+	.form-field {
+		margin-right: 0;
+	}
+}
