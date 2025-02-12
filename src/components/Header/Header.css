@@ -1,12 +1,24 @@
 header {
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 20px;
-	background-color: #f8f9fa;
+	background-color: #F1F1F1;
 	border-bottom: 1px solid #e9ecef;
+	width: 100%;
 }
 .logo {
-	width: 380px;
-	margin: 10px 0 10px 0;
+	padding: 40px;
+	flex: 1;
+}
+
+.logo img {
+	width: 400px;
+	height: auto;
+}
+
+@media (max-width: 768px) {
+	.logo img {
+		width: auto;
+	}
 }

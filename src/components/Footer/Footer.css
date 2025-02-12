@@ -3,12 +3,19 @@
 	color: #fff;
 	padding: 20px;
 	text-align: center;
-	font-family: Arial, sans-serif;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
 }
 
 /* Style for the address and info sections */
 .footer-address,
 .footer-info {
+	flex: 1;
 	margin: 10px 0;
 }
 
@@ -25,12 +32,7 @@
 
 /* Responsive layout for wider screens */
 @media (min-width: 768px) {
-	.footer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		text-align: left;
-	}
+	
 	.footer-address,
 	.footer-info {
 		flex: 1;

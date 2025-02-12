@@ -16,13 +16,17 @@
 }
 
 .team-member {
+	padding: 20px;
+}
+
+.team-member .content {
+	flex: 1;
 	max-width: 1600px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
-	padding: 20px;
+	align-items: flex-start;
 	box-sizing: border-box;
 }
 
@@ -39,22 +43,10 @@
 	align-items: center;
 }
 
-
-
-/* Flex container for each team member */
-.team-member {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	margin: 2em 0;
-}
-
 /* The .reverse class swaps the order of the flex items */
-.team-member.reverse {
+.content {
 	flex-direction: row-reverse;
 }
-
-
 
 /* Flex children: text and image take up half the width */
 .team-member .text,
@@ -64,43 +56,76 @@
 	box-sizing: border-box;
 }
 
+.team-member-title {
+	display: flex;
+	flex-direction: column;
+}
+
 .team-member-title h2 {
+	flex: 1;
 	margin-bottom: 0;
 	text-align: left;
 }
 
 .team-member-title h4 {
+	flex: 1;
 	margin-top: 5px;
 	font-size: small;
 	font-weight: normal;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
+	.team-wrapper {
+		padding: 15px;
+	}
+	.team-text,
+	.team-image {
+		padding: 5px;
+	}
+
 	.team-image img {
-		height: 500px;
-		transform: rotate(-10deg);
 		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 	}
 
-	.team-member.reverse .team-image img {
-		transform: rotate(10deg);
+}
+
+@media (min-width: 768px) {
+	.team-image{
+		padding: 1.5em;
 	}
+	.team-image img {
+		height: 500px;
+	}
+
+
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-	.team-member {
+	.team-wrapper {
 		flex-direction: column;
 	}
-	.team-member.reverse {
-		flex-direction: column;
-	}
-	.team-member .text,
-	.team-member .image {
+
+	.team-content {
 		padding: 10px;
+	}
+
+	.team-member .content {
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+	}
+
+	.team-text,
+	.team-image {
+		flex:1;
+		padding: 0;
 	}
 
 	.team-image img {
 		width: 100%;
+	}
+	.team-title {
+		margin: 0;;
 	}
 }

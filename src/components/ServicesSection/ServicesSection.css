@@ -1,8 +1,9 @@
 .services-section {
-	display: flexbox;
-	flex-direction: row;
+	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: nowrap;;
 }
 
 /* Container for the services section */
@@ -19,10 +20,9 @@
 	color: #333;
 }
 
-/* Grid container for the cards */
 .services-cards-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	display: flex;
+	flex-direction: row;
 	gap: 20px;
 }
 
@@ -37,9 +37,9 @@
 }
 
 /* Hover effect for cards */
-.service-card:hover {
+/* .service-card:hover {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Image styling within the card */
 .service-card-image {
@@ -58,5 +58,23 @@
 /* Description styling for each card */
 .service-card-description {
 	font-size: 1rem;
-	color: #666;
+}
+
+@media (max-width: 1024px) {
+	.services-section {
+		flex-direction: column;
+	}
+	.services-section-title {
+		margin-bottom: 20px;
+	}
+	.services-cards-container {
+		flex-direction: column;
+	}
+	.service-card {
+		padding: 15px;
+	}
+	.service-card-title {
+		font-size: 1.2rem;
+	}
+
 }

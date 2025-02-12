@@ -1,10 +1,11 @@
 /* Container for the contact form */
 .contact-form {
 	/* max-width: 600px; */
-	margin: 20px auto;
+	margin: 70px auto;
 	padding: 20px;
 	box-sizing: border-box;
 	background: #fff;
+	width: 50%;
 }
 
 /* Layout for rows in the form */
@@ -59,6 +60,12 @@ textarea {
 	background-color: #0056b3;
 }
 
+@media (max-width: 1024px) {
+	.contact-form {
+		width: 80%;
+	}
+}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
 	.form-row {
@@ -66,5 +73,9 @@ textarea {
 	}
 	.form-field {
 		margin-right: 0;
+	}
+	.contact-form {
+		margin: 20px auto;
+		width: 100%;
 	}
 }

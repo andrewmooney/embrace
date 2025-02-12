@@ -13,19 +13,20 @@ const TeamSection: React.FC = () => {
             const isEvenPosition = (index + 1) % 2 === 0;
             return (
               <div
-                key={member.id}
+                key={`team-member-${index}`}
                 className={`team-member ${isEvenPosition ? 'reverse' : ''}`}
               >
-                <div className='team-text'>
-                  <div className='team-member-title'>
-                    <h2>{member.name}</h2>
-                    <h4>{member.tag}</h4>
-                  </div>
-
-                  {member.summary.split('\n').map((paragraph) => <p>{paragraph}</p>)}
+                <div className='team-member-title'>
+                  <h2>{member.name}</h2>
+                  <h4>{member.tag}</h4>
                 </div>
-                <div className='team-image'>
-                  <img className='team-member-image' src={member.image} alt={member.name} />
+                <div className='content'>
+                  <div className='team-text'>
+                    {member.summary.split('\n').map((paragraph) => <p>{paragraph}</p>)}
+                  </div>
+                  <div className='team-image'>
+                    <img className='team-member-image' src={member.image} alt={member.name} />
+                  </div>
                 </div>
               </div>
             );

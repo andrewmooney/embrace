@@ -1,6 +1,6 @@
-import React from 'react';
 import './Hero.css';
 import heroImage from '../../assets/images/hester-qiang-95t94hZTESw-unsplash.jpg';
+import { scrollTo } from '../../shared/utils.ts';
 
 const Hero = () => {
   const heroData = {
@@ -10,6 +10,7 @@ const Hero = () => {
     image: heroImage,
     alt: 'Image of a sign with the quote: The journey of a thousand miles begins with a single step. - Lao Tzu',
   };
+
   return (
     <div className='hero-wrapper'>
       <section className='hero-section'>
@@ -19,7 +20,7 @@ const Hero = () => {
             with you every step of the way
           </h2>
           <p className='sen-light'>{heroData.body}</p>
-          <button className='btn-primary'>Learn More</button>
+          <button className='btn-primary' onClick={scrollTo('services')}>Learn More</button>
         </div>
         <div className='hero-image'>
           <img src={heroData.image} alt={heroData.alt} />
