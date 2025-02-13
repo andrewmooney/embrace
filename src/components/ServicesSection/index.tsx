@@ -12,7 +12,6 @@ const ServiceCard: React.FC<ServiceCardProps> = (
 ) => {
   return (
     <div className='service-card'>
-      {image && <img src={image} alt={title} className='service-card-image' />}
       <h3 className='service-card-title'>{title}</h3>
       <p className='service-card-description'>{description}</p>
       <ul className='services-list'>

@@ -43,6 +43,10 @@
 	align-items: center;
 }
 
+.team-member-content {
+	padding: 0 20px;
+}
+
 /* The .reverse class swaps the order of the flex items */
 .content {
 	flex-direction: row-reverse;
@@ -59,6 +63,7 @@
 .team-member-title {
 	display: flex;
 	flex-direction: column;
+	padding-left: 10px;;
 }
 
 .team-member-title h2 {
